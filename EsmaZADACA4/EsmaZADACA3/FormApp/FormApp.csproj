@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8613BC5-2747-47EB-9125-B8B20C0BEBA2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FormApp</RootNamespace>
+    <AssemblyName>FormApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Baza.cs" />
+    <Compile Include="Datagrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datagrid.Designer.cs">
+      <DependentUpon>Datagrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaDoktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaDoktor.Designer.cs">
+      <DependentUpon>FormaDoktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaMain.Designer.cs">
+      <DependentUpon>FormaMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaOsoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaOsoblje.Designer.cs">
+      <DependentUpon>FormaOsoblje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPacijent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPacijent.Designer.cs">
+      <DependentUpon>FormaPacijent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPretraga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPretraga.Designer.cs">
+      <DependentUpon>FormaPretraga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaSlika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaSlika.Designer.cs">
+      <DependentUpon>FormaSlika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaStatistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaStatistika.Designer.cs">
+      <DependentUpon>FormaStatistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaUprava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaUprava.Designer.cs">
+      <DependentUpon>FormaUprava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izuzetak.cs" />
+    <Compile Include="KorisnickaKontrola.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KorisnickaKontrola.Designer.cs">
+      <DependentUpon>KorisnickaKontrola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrikazKartona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazKartona.Designer.cs">
+      <DependentUpon>PrikazKartona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrikazPodataka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikazPodataka.Designer.cs">
+      <DependentUpon>PrikazPodataka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmrtniSlucaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmrtniSlucaj.Designer.cs">
+      <DependentUpon>SmrtniSlucaj.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Datagrid.resx">
+      <DependentUpon>Datagrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaDoktor.resx">
+      <DependentUpon>FormaDoktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaMain.resx">
+      <DependentUpon>FormaMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaOsoblje.resx">
+      <DependentUpon>FormaOsoblje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPacijent.resx">
+      <DependentUpon>FormaPacijent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPretraga.resx">
+      <DependentUpon>FormaPretraga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaSlika.resx">
+      <DependentUpon>FormaSlika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaStatistika.resx">
+      <DependentUpon>FormaStatistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaUprava.resx">
+      <DependentUpon>FormaUprava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnickaKontrola.resx">
+      <DependentUpon>KorisnickaKontrola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrikazKartona.resx">
+      <DependentUpon>PrikazKartona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrikazPodataka.resx">
+      <DependentUpon>PrikazPodataka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SmrtniSlucaj.resx">
+      <DependentUpon>SmrtniSlucaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NasaMK1\NasaMK1.csproj">
+      <Project>{483fabfb-4ee6-40b6-a622-37129b05ffbb}</Project>
+      <Name>NasaMK1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZADACA1\NasaMK.csproj">
+      <Project>{dc065076-2fe8-4000-93d2-9f45c65249f7}</Project>
+      <Name>NasaMK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
